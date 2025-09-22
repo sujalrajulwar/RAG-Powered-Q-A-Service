@@ -81,10 +81,29 @@ This command generates embeddings for all chunks and builds the FAISS vector ind
 
 The reranker is essential for surfacing the most relevant information, especially for conceptual questions. Here is a comparison of the top-ranked answer for a tricky query using both modes.
 
-| Question                                                      | Mode      | Top-Ranked Answer                                                                                           |
-|---------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------|
-| Explain the concept of functional safety and provide an example. | Baseline  | Functional safety refers to the design and implementation of systems, products, and processes that are designed to prevent or mitigate hazards... |
-|                                                               | Reranker  | Functional safety refers to the design and operation of electronic systems that ensure they operate safely, preventing damage...                  |
+## Complete Results & Comparison Table
+
+The following table summarizes the performance of the baseline search (vector-only) versus the reranker (vector + keyword) for all 8 questions. The reranker consistently improves the quality and relevance of the top-ranked answers.
+
+| Question                                               | Mode      | Top-Ranked Answer                                                                                           |
+|--------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------|
+| 1. What is the importance of machine guarding?         | Baseline  | Machine guarding is crucial for ensuring safety and preventing hazards in hazardous machines, as it provides protection against... |
+|                                                        | Reranker  | Machine guarding is an important aspect of functional safety because it helps to prevent hazards, re...       |
+| 2. What does the OSHA lockout/tagout standard cover?  | Baseline  | The OSHA lockout/tagout standard covers the following topics:...                                            |
+|                                                        | Reranker  | The OSHA Lockout/Tagout Standard covers the following topics:...                                            |
+| 3. Explain the concept of functional safety and provide an example. | Baseline  | Functional safety refers to the design and implementation of systems, products, and processes that are designed to prevent or mitigate hazards... |
+|                                                        | Reranker  | Functional safety refers to the design and operation of electronic systems that ensure they operate safely, preventing damage... |
+| 4. How do safety functions protect workers from harm?  | Baseline  | Safety functions in industrial settings protect workers from harm by ensuring that machinery, equipment, and other hazardous ... |
+|                                                        | Reranker  | Safety functions protect workers from harm by providing a safe and controlled environment for their work activities. They are... |
+| 5. What is the purpose of risk assessment in machine safety? | Baseline  | Risk assessment in machine safety refers to the process of identifying, evaluating, and mitigating potential hazards or risks... |
+|                                                        | Reranker  | The purpose of risk assessment in machine safety is to identify and quantify potential risks associated with the operation, m... |
+| 6. Describe the role of protective devices in industrial automation. | Baseline  | Protective devices play a crucial role in industrial automation by preventing hazardous situations and minimizing risks assoc... |
+|                                                        | Reranker  | Industrial robots have several protective devices that are designed to safeguard workers from hazards and risks associated wi... |
+| 7. What are some examples of machine hazards?          | Baseline  | Some examples of machine hazards include:...                                                                 |
+|                                                        | Reranker  | Some examples of machine hazards include:...                                                                 |
+| 8. What is a safety-related part of a control system?  | Baseline  | A safety-related part of a control system is defined in international standards as the "safety-related parts of control syste..." |
+|                                                        | Reranker  | A safety-related part of a control system is defined in international standards as the "safety-related parts of control syste..." |
+                
 
 ---
 

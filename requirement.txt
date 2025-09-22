@@ -1,0 +1,8 @@
+django
+pypdf2
+faiss-cpu
+sentence-transformers
+numpy
+rank-bm25
+requests
+huggingface-hub
